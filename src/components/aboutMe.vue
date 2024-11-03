@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="container">
+    <!-- <div class="container">
         <div class="card" >
                 <div class="content-wrapper">
                     <div class="intro">
@@ -16,6 +16,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     
 </template>

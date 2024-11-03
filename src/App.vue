@@ -1,5 +1,7 @@
 <script setup>
 import MainPage from './components/BaseTemplate.vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 </script>
 
 <template>
@@ -9,9 +11,15 @@ import MainPage from './components/BaseTemplate.vue';
     
        <!-- Social Icons -->
     <div class="social-icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-
+      <a href="#" target="_blank">
+        <FontAwesomeIcon :icon="faGithub" />
+      </a>
+      <a href="#" target="_blank">
+        <FontAwesomeIcon :icon="faLinkedin" />
+      </a>
+      <a href="#" target="_blank">
+        <FontAwesomeIcon :icon="faTwitter" />
+      </a>
     </div>
     
     <!-- Contact Email -->
