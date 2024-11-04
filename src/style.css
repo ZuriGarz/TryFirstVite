@@ -27,6 +27,7 @@ body {
     max-width: 50%;
 }
 
+
 .intro h1 {
     font-size: 3rem;
     line-height: 1.2;
@@ -108,7 +109,9 @@ body {
 } */
 
  
-
+.section {
+    min-height: 200vh;
+}
 
 .card{
   padding: 1rem;
@@ -118,3 +121,60 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Fade animations */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 10; /* Ensure it stays above parallax sections */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Parallax section styles */
+.parallax-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  padding-top: 60px; /* To offset the fixed header */
+}

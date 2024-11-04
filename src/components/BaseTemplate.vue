@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import { useMotion } from '@vueuse/motion'
 import bio from "./BIO.vue"
 import About from "./aboutMe.vue"
@@ -10,15 +10,16 @@ const parallaxEffect = () => {
   document.querySelectorAll('.parallax-section').forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
-    if (scrollPosition >= sectionTop - window.innerHeight && scrollPosition <= sectionTop + sectionHeight) {
-      section.style.backgroundPositionY = `${(scrollPosition - sectionmiddle) * 0.5}px`;
+    const sectionBottom = sectionTop + sectionHeight;
+    if (scrollPosition >= sectionTop - window.innerHeight && scrollPosition <= sectionBottom) {
+      section.style.backgroundPositionY = `${(scrollPosition - sectionTop) * 0.1}px`;
     }
   });
 };
 
 // Lifecycle hooks
 onMounted(() => {
-  window.addEventListener('scroll', parallaxEffect);
+  window.addEventListener('scroll', () => requestAnimationFrame(parallaxEffect));
 });
 
 onUnmounted(() => {
@@ -28,17 +29,19 @@ onUnmounted(() => {
 
 <template>
   <div>
-    <section class="parallax-section parallax1">
+    <section class="parallax-section parallax1" id="bio">
       <bio />
-      
     </section>
 
     <section class="parallax-section parallax2">
       <About />
-      
     </section>
 
-    <section class="parallax-section parallax3">
+    <section class="parallax-section parallax3" id="about">
+      <!-- Add more content if needed -->
+    </section>
+
+    <section class="parallax-section parallax4">
       <!-- Add more content if needed -->
     </section>
   </div>
@@ -56,33 +59,24 @@ onUnmounted(() => {
   background-position: center center;
   background-attachment: fixed;
   position: relative;
-
+}
+.main-container {
+  margin-top: 60px; /* Offset to prevent header overlap */
 }
 
 .parallax1 {
-  background-image: url('C:\Git\VueJSProject\public\background.jpg');
+  background-image: url('/background.jpg');
 }
 
 .parallax2 {
-  background-image: url('C:\Git\VueJSProject\public\zf4z6utfezua1.jpg');
+  background-image: url('/path-to-image.jpg');
 }
 
 .parallax3 {
-  background-image: url('@/assets/background3.jpg');
+  background-image: url('/zf4z6utfezua1.jpg');
 }
 
-
-
-/* Fade animations */
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-out {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+.parallax4 {
+  background-image: url('');
 }
 </style>

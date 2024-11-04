@@ -6,20 +6,28 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 
 <template>
   
+    <header class="header">
+      <h1>My Parallax Page</h1>
+      <nav>
+        <a href="#bio">Bio</a>
+        <a href="#about">About</a>
+        <!-- Add more links as needed -->
+      </nav>
+    </header>
 
     <MainPage />
     
        <!-- Social Icons -->
     <div class="social-icons">
-      <a href="#" target="_blank">
+      <a href="https://github.com/ZuriGarz">
         <FontAwesomeIcon :icon="faGithub" />
       </a>
-      <a href="#" target="_blank">
+      <a href="https://www.linkedin.com/in/valentino-jaya-lay-a913b5233/">
         <FontAwesomeIcon :icon="faLinkedin" />
       </a>
-      <a href="#" target="_blank">
+      <!-- <a href="#" target="_blank">
         <FontAwesomeIcon :icon="faTwitter" />
-      </a>
+      </a> -->
     </div>
     
     <!-- Contact Email -->
