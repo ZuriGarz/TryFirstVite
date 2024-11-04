@@ -4,7 +4,7 @@ import { useMotion } from '@vueuse/motion'
 import bio from "./BIO.vue"
 import About from "./aboutMe.vue"
 
-// Parallax effect
+// Parallax effect 
 const parallaxEffect = () => {
   const scrollPosition = window.scrollY;
   document.querySelectorAll('.parallax-section').forEach((section) => {
@@ -70,6 +70,8 @@ onUnmounted(() => {
 
 .parallax2 {
   background-image: url('/path-to-image.jpg');
+  height: auto;
+    /* Allow this section to grow with content */
 }
 
 .parallax3 {

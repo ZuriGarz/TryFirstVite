@@ -7,7 +7,7 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 <template>
   
     <header class="header">
-      <h1>My Parallax Page</h1>
+      
       <nav>
         <a href="#bio">Bio</a>
         <a href="#about">About</a>

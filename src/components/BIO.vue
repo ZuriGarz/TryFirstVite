@@ -5,12 +5,12 @@ import { useMotion } from '@vueuse/motion'
 const displayText = ref('')
 const isDeleting = ref(false)
 const loopNum = ref(0)
-const words = ['Full Stack Developer Intern', 'Front End Developer', 'SOC']
+const words = ['Full Stack Developer  ', 'Front End Developer  ', 'SOC  ', 'Freelancer  ']
 const delta = ref(200)
 
 const topLeft = ref(null)
 const topRight = ref(null)
-const bottomLeft = ref(null)
+const bottomLeft = ref(null) 
 const bottomRight = ref(null)
 
 let ticker = null
@@ -82,55 +82,55 @@ useMotion(bottomRight, {
 </script>
 
 <template>
-    <div class="container">
-        <!-- Top pillars -->
-        <div class="pillars top">
-            <div class="pillar-group" ref="topLeft">
-                <div class="pillar"></div>
-                <div class="pillar"></div>
-                <div class="pillar"></div>
-            </div>
-            <div class="pillar-group" ref="topRight">
-                <div class="pillar"></div>
-                <div class="pillar"></div>
-                <div class="pillar"></div>
-            </div>
+  <div class="container">
+    <!-- Top pillars -->
+    <div class="pillars top">
+      <div class="pillar-group" ref="topLeft">
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+      </div>
+      <div class="pillar-group" ref="topRight">
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+      </div>
+    </div>
+
+    <!-- Bottom pillars -->
+    <div class="pillars bottom">
+      <div class="pillar-group" ref="bottomLeft">
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+      </div>
+      <div class="pillar-group" ref="bottomRight">
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+        <div class="pillar"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="content-wrapper">
+        <div class="intro">
+          <p>Welcome</p>
+          <h1>Hello I am Valentino Jaya Lay From Indonesia</h1>
+          <div class="typing-container">
+            <span class="static-text">I'm a </span>
+            <span class="dynamic-text">
+              {{ displayText }}
+              <span class="cursor"></span>
+            </span>
+          </div>
         </div>
 
-        <!-- Bottom pillars -->
-        <div class="pillars bottom">
-            <div class="pillar-group" ref="bottomLeft">
-                <div class="pillar"></div>
-                <div class="pillar"></div>
-                <div class="pillar"></div>
-            </div>
-            <div class="pillar-group" ref="bottomRight">
-                <div class="pillar"></div>
-                <div class="pillar"></div>
-                <div class="pillar"></div>
-            </div>
+        <div class="profile-image">
+          <img src="C:\Git\TryFirstVite\public\profile.jpg" alt="Profile Image">
         </div>
-       
-        <div class="card">
-            <div class="content-wrapper">
-                <div class="intro">
-                    <p>Welcome</p>
-                    <h1>Hello I am Valentino Jaya Lay From Indonesia</h1>
-                    <div class="typing-container">
-                        <span class="static-text">I'm a </span>
-                        <span class="dynamic-text">
-                            {{ displayText }}
-                            <span class="cursor"></span>
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="profile-image">
-                    <img src="C:\Git\VueJSProject\public\profile.jpg" alt="Profile Image">
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <style scoped>

@@ -6,12 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #000428, #004e92); 
+    background: linear-gradient(to right, #000428, #080317); 
     align-items: center;
     justify-content: center;
     margin: 0;
     color: white; /* Text color for contrast */
-    color: #fff;
+    /* color: #fff; */
     overflow-x: hidden;
 }
 
