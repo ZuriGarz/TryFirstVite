@@ -2,7 +2,10 @@
 import { onMounted, onUnmounted } from 'vue'
 import { useMotion } from '@vueuse/motion'
 import bio from "./BIO.vue"
+import project from "./Projects.vue"
 import About from "./aboutMe.vue"
+import Contact1 from "./contacts1.vue"
+
 
 // Parallax effect 
 const parallaxEffect = () => {
@@ -33,16 +36,16 @@ onUnmounted(() => {
       <bio />
     </section>
 
-    <section class="parallax-section parallax2">
+    <section class="parallax-section parallax2" id="about">
       <About />
     </section>
 
-    <section class="parallax-section parallax3" id="about">
-      <!-- Add more content if needed -->
+    <section class="parallax-section parallax3" id="project">
+      <project/>
     </section>
 
-    <section class="parallax-section parallax4">
-      <!-- Add more content if needed -->
+    <section>
+      <Contact1/>
     </section>
   </div>
 </template>
@@ -66,6 +69,7 @@ onUnmounted(() => {
 
 .parallax1 {
   background-image: url('/background.jpg');
+  height: auto;
 }
 
 .parallax2 {
@@ -76,9 +80,8 @@ onUnmounted(() => {
 
 .parallax3 {
   background-image: url('/zf4z6utfezua1.jpg');
+  height: auto;
 }
 
-.parallax4 {
-  background-image: url('');
-}
+
 </style>

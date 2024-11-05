@@ -115,15 +115,7 @@ useIntersectionObserver(aboutContentRef, ([{ isIntersecting }]) => {
                             </div>
                         </div>
 
-                        <div class="skills-section">
-                            <h3 class="section-title">Technical Skills</h3>
-                            <div class="skills-container">
-                                <div v-for="skill in skills" :key="skill" class="skill-tag"
-                                    :class="{ 'passive': skill === displayedSkill }">
-                                    {{ skill }}
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="experience-section">
                             <h3 class="section-title">Experience</h3>
@@ -226,7 +218,7 @@ useIntersectionObserver(aboutContentRef, ([{ isIntersecting }]) => {
 
 .highlight-text {
     color: #4834d4;
-    font-weight: 500;
+    font-weight: 200;
 }
 
 .skills-container {
@@ -316,7 +308,7 @@ useIntersectionObserver(aboutContentRef, ([{ isIntersecting }]) => {
     }
 
     .glowing-text {
-        font-size: 2rem;
+        font-size: 0.5rem;
     }
 
     .exp-header,

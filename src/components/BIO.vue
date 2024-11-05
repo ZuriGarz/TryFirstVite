@@ -189,7 +189,7 @@ useMotion(bottomRight, {
 
 .dynamic-text {
   position: relative;
-  color: #4834d4;
+  color: #8979f3;
   padding-right: 5px;
 }
 
